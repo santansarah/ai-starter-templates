@@ -1,0 +1,14 @@
+mainmenu "Generic BLE hardware blueprint"
+source "Kconfig.zephyr"
+config TEMPLATE_ACQUISITION_INTERVAL_MS
+	int "Delay between acquisition attempts (ms)"
+	range 10 60000
+	default 500
+config TEMPLATE_PUBLICATION_INTERVAL_MS
+	int "Delay between BLE publication attempts (ms)"
+	range 10 60000
+	default 500
+config TEMPLATE_STALE_MS
+	int "Age at which a successful sample becomes stale (ms)"
+	range 1 600000
+	default 1500
